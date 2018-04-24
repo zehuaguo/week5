@@ -49,9 +49,6 @@
                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="Save"/>
-                            <connections>
-                                <action selector="saveTripInfo:" destination="Gp4-r9-KxA" eventType="touchUpInside" id="7FQ-jN-Im0"/>
-                            </connections>
                         </button>
                         <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="S5X-cp-1jR">
                             <rect key="frame" x="0.0" y="176" width="375" height="44"/>
@@ -141,11 +138,6 @@
                             <outlet property="delegate" destination="Gp4-r9-KxA" id="rUn-Tp-ZFz"/>
                         </connections>
                     </tableView>
-                    <connections>
-                        <outlet property="tripDate" destination="UOM-tE-tqN" id="PhP-bV-pH8"/>
-                        <outlet property="tripDestination" destination="GnG-YF-min" id="rgc-FG-r15"/>
-                        <outlet property="tripDuration" destination="GoZ-SD-sL7" id="1e7-ng-c8Y"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c8O-em-MGR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

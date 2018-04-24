@@ -15,8 +15,9 @@
 		8F2034B2208F1DBE00D087E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F2034B0208F1DBE00D087E5 /* LaunchScreen.storyboard */; };
 		8F2034BD208F1DBE00D087E5 /* week5Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2034BC208F1DBE00D087E5 /* week5Tests.swift */; };
 		8F2034C8208F1DBE00D087E5 /* week5UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2034C7208F1DBE00D087E5 /* week5UITests.swift */; };
-		8F2034D6208F203300D087E5 /* TripsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2034D5208F203300D087E5 /* TripsViewController.swift */; };
-		8F2034D8208F203900D087E5 /* TripDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2034D7208F203900D087E5 /* TripDetailsViewController.swift */; };
+		8F2034DE208F251B00D087E5 /* TripsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2034DD208F251B00D087E5 /* TripsViewController.swift */; };
+		8F2034E0208F254400D087E5 /* TripDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2034DF208F254400D087E5 /* TripDetailsViewController.swift */; };
+		8F2034E2208F255C00D087E5 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2034E1208F255C00D087E5 /* Trip.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,8 +52,9 @@
 		8F2034C3208F1DBE00D087E5 /* week5UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = week5UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F2034C7208F1DBE00D087E5 /* week5UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = week5UITests.swift; sourceTree = "<group>"; };
 		8F2034C9208F1DBE00D087E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8F2034D5208F203300D087E5 /* TripsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TripsViewController.swift; path = "../../../week6/Single-View Application/Single-View Application/TripsViewController.swift"; sourceTree = "<group>"; };
-		8F2034D7208F203900D087E5 /* TripDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TripDetailsViewController.swift; path = "../../../week6/Single-View Application/Single-View Application/TripDetailsViewController.swift"; sourceTree = "<group>"; };
+		8F2034DD208F251B00D087E5 /* TripsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsViewController.swift; sourceTree = "<group>"; };
+		8F2034DF208F254400D087E5 /* TripDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetailsViewController.swift; sourceTree = "<group>"; };
+		8F2034E1208F255C00D087E5 /* Trip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,13 +107,14 @@
 			children = (
 				8F2034A4208F1DBE00D087E5 /* AppDelegate.swift */,
 				8F2034A6208F1DBE00D087E5 /* ViewController.swift */,
-				8F2034D5208F203300D087E5 /* TripsViewController.swift */,
-				8F2034D7208F203900D087E5 /* TripDetailsViewController.swift */,
+				8F2034E1208F255C00D087E5 /* Trip.swift */,
 				8F2034A8208F1DBE00D087E5 /* Main.storyboard */,
 				8F2034AE208F1DBE00D087E5 /* Assets.xcassets */,
 				8F2034B0208F1DBE00D087E5 /* LaunchScreen.storyboard */,
 				8F2034B3208F1DBE00D087E5 /* Info.plist */,
 				8F2034AB208F1DBE00D087E5 /* week5.xcdatamodeld */,
+				8F2034DD208F251B00D087E5 /* TripsViewController.swift */,
+				8F2034DF208F254400D087E5 /* TripDetailsViewController.swift */,
 			);
 			path = week5;
 			sourceTree = "<group>";
@@ -271,9 +274,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F2034D8208F203900D087E5 /* TripDetailsViewController.swift in Sources */,
+				8F2034E2208F255C00D087E5 /* Trip.swift in Sources */,
+				8F2034E0208F254400D087E5 /* TripDetailsViewController.swift in Sources */,
 				8F2034AD208F1DBE00D087E5 /* week5.xcdatamodeld in Sources */,
-				8F2034D6208F203300D087E5 /* TripsViewController.swift in Sources */,
+				8F2034DE208F251B00D087E5 /* TripsViewController.swift in Sources */,
 				8F2034A7208F1DBE00D087E5 /* ViewController.swift in Sources */,
 				8F2034A5208F1DBE00D087E5 /* AppDelegate.swift in Sources */,
 			);
