@@ -19,7 +19,30 @@ class TripDetailsViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-
+    @IBOutlet weak var tripDate: UITextField!
+    
+    
+    @IBOutlet weak var tripDuration: UITextField!
+    
+    
+    @IBOutlet weak var tripDestination: UITextField!
+    
+    @IBAction func saveTripInfo(_ sender: Any)
+    {
+        trip!.tripDate = (from: tripDate.text!)!
+        trip!.tripDuration = Int(tripDuration.text!)!
+        trip!.tripDestination = tripDestination.text!
+    }
+    @IBAction func viewWillAppear(_ animated: Bool) {
+        if trip !=nil {
+            tripDate.text = trip!.tripDate
+            tripDuration.text = "\(trip!.tripDuration)"
+            tripDestination.text = trip!.tripDestination
+        }
+    }
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

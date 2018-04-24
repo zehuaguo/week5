@@ -30,23 +30,29 @@ class TripsViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return Trips.trips.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "tripCell", for: indexPath)
+        let trip = Trips.getTrip(at: indexPath.row)!
+        cell.textLabel?.text = trip.tripDestination
+        cell.detailTextLabel?.text = trip.tripDate.description
+        cell.imageView?.image = trip.img
+        
+        
+        
         // Configure the cell...
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
@@ -55,18 +61,33 @@ class TripsViewController: UITableViewController {
         return true
     }
     */
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "segueTripDetails", sender: Trips.trips[indexPath.row])
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segueTripDetails"{
+            (segue.destination as! TripDetailsViewController).trip = (sender as! Trip)
+        }
+    }
+    
+    @IBAction func unWindSegue(segue : UIStoryboardSegue)
+    {
+        self.tableView.reloadData()
+    }
 
-    /*
+    
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
+            Trips.trips.remove(at: indexPath.row)
             // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
+            self.tableView.delegate(at: [indexPath], with: .fade)
+        }
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        
     }
-    */
+    
 
     /*
     // Override to support rearranging the table view.
